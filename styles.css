@@ -1,0 +1,18 @@
+div.container-fluid{
+    height: 100vh;
+    background-color: cadetblue;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    background-color: whitesmoke;
+    color: cadetblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+}
+
+h2{
+    text-align: center;
+}
