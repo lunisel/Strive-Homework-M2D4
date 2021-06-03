@@ -1,18 +1,17 @@
 const input = document.getElementById("myInput");
-const sums = document.getElementById("numberTeam");
+const nOfTeams = document.getElementById("numberTeam");
 const output = document.getElementById("output");
 const buttons = document.getElementById("buttons");
 const reset = document.getElementById("reset");
 const container = document.querySelector(".container");
-const answer = document.querySelector(".hidden");
 const teams = document.querySelector(".teams");
 
 function getInputValue() {
   const values = input.value;
-  const total = sums.value;
+  const total = nOfTeams.value;
   let person = values.split(",");
 
-  let random = person.sort(() => Math.random() - 0.5);
+  let random = person.sort(() => Math.random());
   console.log(random);
 
   function chunk(array, size) {
@@ -22,10 +21,10 @@ function getInputValue() {
     return [array.slice(0, size), ...chunk(array.slice(size), size)];
   }
 
-  var team = chunk(random, total);
+  let team = chunk(random, total);
 
   for (let i = 0; i < team.length; i++) {
-    output.innerHTML += `<p> Team-${i + 1}: ${team[i]} </p>`;
+    output.innerHTML += `<div class="col-12 col-sm-6"><p class="col-12"> Team ${i + 1}: <br> ${team[i]} </p></div>`;
   }
 }
 
