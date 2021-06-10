@@ -1,0 +1,41 @@
+    
+    let personPerTeam = Math.floor(numberOfPeople / numberOfTeams.value)
+    let remainder = numberOfPeople % numberOfTeams.value
+
+    let random = Math.floor(Math.random()*namesArray.length)
+
+    for (let i=0; i<numberOfTeams.value; i++){
+        let divTeam = document.createElement("div")
+        divTeam.classList.add("col-6")
+        divTeam.classList.add("col-sm-4")
+        divTeam.classList.add("col-md-3")
+        divTeam.innerHTML = `<ol> Team ${i+1}</ol>`
+        rowTeams.appendChild(divTeam)
+        for(let i=0; i<personPerTeam; i++){
+            let teamsOl = document.getElementsByTagName("ol")
+            if((teamsOl[index] === 0)&&(teamsOl.length < 6)){
+                let teamNameLi = document.createElement("li")
+                teamsOl[0].appendChild(teamNameLi)
+                teamNameLi.innerHTML = `${namesArray[random]}`
+            }
+        } 
+    }
+
+
+
+
+
+
+
+
+let ol1 = document.getElementsByClassName("ol")[0]
+    let ol2 = document.getElementsByClassName("ol")[1]
+    let ol3 = document.getElementsByClassName("ol")[2]
+    let ol4 = document.getElementsByClassName("ol")[3]
+    let ol5 = document.getElementsByClassName("ol")[4]
+    let ol6 = document.getElementsByClassName("ol")[5]
+    let participantLi = document.createElement("li")
+
+    for(let i=0; i<personPerTeam; i++){
+        
+    }
